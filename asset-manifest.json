@@ -1,0 +1,13 @@
+{
+  "main.css": "/expenserecorder/static/css/main.ca37cf2b.chunk.css",
+  "main.js": "/expenserecorder/static/js/main.d0d25c0a.chunk.js",
+  "main.js.map": "/expenserecorder/static/js/main.d0d25c0a.chunk.js.map",
+  "static/js/1.71d1f426.chunk.js": "/expenserecorder/static/js/1.71d1f426.chunk.js",
+  "static/js/1.71d1f426.chunk.js.map": "/expenserecorder/static/js/1.71d1f426.chunk.js.map",
+  "runtime~main.js": "/expenserecorder/static/js/runtime~main.d54e53cd.js",
+  "runtime~main.js.map": "/expenserecorder/static/js/runtime~main.d54e53cd.js.map",
+  "static/css/main.ca37cf2b.chunk.css.map": "/expenserecorder/static/css/main.ca37cf2b.chunk.css.map",
+  "index.html": "/expenserecorder/index.html",
+  "precache-manifest.096273c0d7dc086aef6ee2767b9898b7.js": "/expenserecorder/precache-manifest.096273c0d7dc086aef6ee2767b9898b7.js",
+  "service-worker.js": "/expenserecorder/service-worker.js"
+}
