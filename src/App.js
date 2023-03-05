@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Expenses from "./Components/Expenses/Expenses";
 import NewExpense from "./Components/NewExpense/NewExpense";
-
+import ExpensesChart from "./Components/Expenses/ExpensesChart";
 const dummyExpenses = [
   {
     id: "e1",
@@ -10,11 +10,11 @@ const dummyExpenses = [
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
-  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 3, 12) },
   {
     id: "e3",
     title: "Car Insurance",
-    amount: 294.67,
+    amount: 994.67,
     date: new Date(2021, 2, 28),
   },
   {
