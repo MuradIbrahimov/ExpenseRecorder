@@ -2,7 +2,9 @@ import { useState } from "react";
 import "./Expenses.css";
 import ExpensesList from "./ExpensesList";
 import Card from "../UI/Card";
+import ExpensesChart from "./ExpensesChart";
 import ExpensesFilter from "./ExpensesFilter";
+
 function Expenses(props) {
   const expenseArr = props.expense;
   const [currstate, setCurrState] = useState(2021);
@@ -20,6 +22,7 @@ function Expenses(props) {
           selectedDefaultValue={currstate}
           expenseFilterState={expenseFilterStateChanged}
         ></ExpensesFilter>
+        <ExpensesChart chartExpense={filteredExpenseArr}></ExpensesChart>
         <ExpensesList item={filteredExpenseArr}></ExpensesList>
       </Card>
     </>
