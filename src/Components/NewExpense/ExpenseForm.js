@@ -22,12 +22,15 @@ const ExpenseForm = (props) => {
       return { ...prevState, enteredDate: event.target.value };
     });
   };
+
+  // SUBMIT EVENT
+
   const submitEventHandler = (event) => {
     event.preventDefault();
     const expenseFormDatas = {
       title: userInput.enteredTitle,
       amount: userInput.enteredAmount,
-      date: new Date(userInput.enteredTitle),
+      date: new Date(userInput.enteredDate),
     };
     props.onSaveExpenseData(expenseFormDatas);
     setUserInput({
@@ -36,6 +39,8 @@ const ExpenseForm = (props) => {
       enteredDate: "",
     });
   };
+
+  //DATA TRANSFER ENDS
 
   return (
     <form onSubmit={submitEventHandler}>

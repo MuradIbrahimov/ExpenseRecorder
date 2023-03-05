@@ -1,34 +1,26 @@
+import { useState } from "react";
 import "./Expenses.css";
-import ExpenseItem from "./ExpenseItem";
+import ExpensesList from "./ExpensesList";
 import Card from "../UI/Card";
-
+import ExpensesFilter from "./ExpensesFilter";
 function Expenses(props) {
   const expenseArr = props.expense;
-
+  const [currstate, setCurrState] = useState(2021);
+  const expenseFilterStateChanged = (changedState) => {
+    setCurrState(changedState);
+    console.log(typeof currstate);
+  };
+  const filteredExpenseArr = expenseArr.filter((x) => {
+    return x.date.getFullYear() === Number(currstate);
+  });
   return (
     <>
       <Card className="expenses">
-        <ExpenseItem
-          title={expenseArr[0].title}
-          amount={expenseArr[0].amount}
-          date={expenseArr[0].date}
-        ></ExpenseItem>
-        <ExpenseItem
-          title={expenseArr[1].title}
-          amount={expenseArr[1].amount}
-          date={expenseArr[1].date}
-        ></ExpenseItem>
-        <ExpenseItem
-          title={expenseArr[2].title}
-          amount={expenseArr[2].amount}
-          date={expenseArr[2].date}
-        ></ExpenseItem>
-        <ExpenseItem
-          title={expenseArr[3].title}
-          amount={expenseArr[3].amount}
-          date={expenseArr[3].date}
-        ></ExpenseItem>
-        ;
+        <ExpensesFilter
+          selectedDefaultValue={currstate}
+          expenseFilterState={expenseFilterStateChanged}
+        ></ExpensesFilter>
+        <ExpensesList item={filteredExpenseArr}></ExpensesList>
       </Card>
     </>
   );

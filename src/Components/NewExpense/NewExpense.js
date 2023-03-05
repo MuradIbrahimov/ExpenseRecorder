@@ -3,26 +3,20 @@ import ExpenseForm from "./ExpenseForm";
 import ExpenseItem from "../Expenses/ExpenseItem";
 import "./NewExpense.css";
 const NewExpense = (props) => {
-  const [newExpense, setNewExpense] = useState("");
-  const expenseDataSaveHandler = (submitExpenseData) => {
+  //DATA HANDLER
+  const expenseDataSaveHandler = (enteredExpenseData) => {
     const formExpenseData = {
-      ...submitExpenseData,
+      ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    console.log(formExpenseData.title);
-    setNewExpense(
-      <ExpenseItem
-        title={formExpenseData.title}
-        amount={formExpenseData.amount}
-        date={formExpenseData.date}
-      ></ExpenseItem>
-    );
-    // setNewExpenseArr([].push(formExpenseData));
+
+    props.onSaveExpenseDataApp(formExpenseData);
+    // DATA HANDLER ENDS
   };
+
   return (
     <div className="new-expense">
       <ExpenseForm onSaveExpenseData={expenseDataSaveHandler}></ExpenseForm>
-      {newExpense}
     </div>
   );
 };
